@@ -1,0 +1,299 @@
+Apr 01 12:38:47: vmx| Log for VMware Workstation pid=2920 version=5.5.1 build=build-19175 option=Release
+Apr 01 12:38:47: vmx| Command line: "C:\Program Files\VMware\VMware Workstation\bin\vmware-vmx.exe" "-@" "pipe=\\.\pipe\vmx956f583f91cb381b; vm=956f583f91cb381b" "D:\我的操作系统\hos-0.01的实现\Hos虚拟\Other Linux.vmx"
+Apr 01 12:38:47: vmx| UI Connecting to pipe '\\.\pipe\vmx956f583f91cb381b' with user '(null)'
+Apr 01 12:38:47: vmx| CPU #0 TSC = 1562353985142
+Apr 01 12:38:47: vmx| TSC delta 0
+Apr 01 12:38:47: vmx| VMMon_GetkHzEstimate: Calculated 1829892 kHz
+Apr 01 12:38:47: vmx| pcpu #0 CPUID numEntries=1 AuthcAMDenti
+Apr 01 12:38:47: vmx| pcpu #0 CPUID version=0x681 id1.edx=0x383fbff id1.ecx=0x0 id1.ebx=0x0
+Apr 01 12:38:47: vmx| pcpu #0 CPUID id80.eax=80000008 id81.edx=0xc1cbfbff id81.ecx=0x0
+Apr 01 12:38:47: vmx| CPUID id1.edx: 0x383fbff id1.ecx: 0 id81.edx: 0xc1cbfbff id81.ecx: 0
+Apr 01 12:38:47: vmx| CPUID id88.ecx: 0 id88.edx: 0
+Apr 01 12:38:47: vmx| ACL_InitCapabilities: here 1 (bug 63252)
+Apr 01 12:38:47: vmx| changing directory to D:\我的操作系统\hos-0.01的实现\Hos虚拟\.
+Apr 01 12:38:47: vmx| Config file: D:\我的操作系统\hos-0.01的实现\Hos虚拟\Other Linux.vmx
+Apr 01 12:38:48: vmx| VMXVmdbCbVmVmxExecState: Exec state change requested to state poweredOn without reset
+Apr 01 12:38:48: vmx| PowerOn
+Apr 01 12:38:48: vmx| HOST Windows version 5.1, build 2600, platform 2, "Service Pack 2"
+Apr 01 12:38:48: vmx| DICT --- USER PREFERENCES
+Apr 01 12:38:48: vmx| DICT    pref.autoFitFullScreen = fitHostToGuest
+Apr 01 12:38:48: vmx| DICT      pref.allowInsanePkgs = FALSE
+Apr 01 12:38:48: vmx| DICT     pref.view.navBar.type = favorites
+Apr 01 12:38:48: vmx| DICT   pref.ws.currentObj.path = /vm/#956f583f91cb381b/
+Apr 01 12:38:48: vmx| DICT   pref.ws.currentObj.type = vm
+Apr 01 12:38:48: vmx| DICT pref.ws.openedObj0.present = FALSE
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj0.name = Home
+Apr 01 12:38:48: vmx| DICT pref.ws.openedObj1.present = FALSE
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj1.type = vm
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj1.path = /vm/#4b38610f3dab0c70/
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj1.file = D:\我的操作系统\RedHat Linux 黄河\Red Hat Linux.vmx
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj1.name = Red Hat Linux
+Apr 01 12:38:48: vmx| DICT  pref.ws.openedObj.maxNum = 8
+Apr 01 12:38:48: vmx| DICT     pref.mruDest0.present = FALSE
+Apr 01 12:38:48: vmx| DICT  pref.mruDest0.destString = 
+Apr 01 12:38:48: vmx| DICT        pref.mruDest0.user = 
+Apr 01 12:38:48: vmx| DICT     pref.mruDest1.present = FALSE
+Apr 01 12:38:48: vmx| DICT  pref.mruDest1.destString = 
+Apr 01 12:38:48: vmx| DICT        pref.mruDest1.user = 
+Apr 01 12:38:48: vmx| DICT     pref.mruDest2.present = FALSE
+Apr 01 12:38:48: vmx| DICT  pref.mruDest2.destString = 
+Apr 01 12:38:48: vmx| DICT        pref.mruDest2.user = 
+Apr 01 12:38:48: vmx| DICT     pref.mruDest3.present = FALSE
+Apr 01 12:38:48: vmx| DICT  pref.mruDest3.destString = 
+Apr 01 12:38:48: vmx| DICT        pref.mruDest3.user = 
+Apr 01 12:38:48: vmx| DICT     pref.mruDest4.present = FALSE
+Apr 01 12:38:48: vmx| DICT  pref.mruDest4.destString = 
+Apr 01 12:38:48: vmx| DICT        pref.mruDest4.user = 
+Apr 01 12:38:48: vmx| DICT     pref.mruDest5.present = FALSE
+Apr 01 12:38:48: vmx| DICT  pref.mruDest5.destString = 
+Apr 01 12:38:48: vmx| DICT        pref.mruDest5.user = 
+Apr 01 12:38:48: vmx| DICT     pref.mruDest6.present = FALSE
+Apr 01 12:38:48: vmx| DICT  pref.mruDest6.destString = 
+Apr 01 12:38:48: vmx| DICT        pref.mruDest6.user = 
+Apr 01 12:38:48: vmx| DICT     pref.mruDest7.present = FALSE
+Apr 01 12:38:48: vmx| DICT  pref.mruDest7.destString = 
+Apr 01 12:38:48: vmx| DICT        pref.mruDest7.user = 
+Apr 01 12:38:48: vmx| DICT       pref.placement.left = 181
+Apr 01 12:38:48: vmx| DICT        pref.placement.top = 14
+Apr 01 12:38:48: vmx| DICT      pref.placement.right = 944
+Apr 01 12:38:48: vmx| DICT     pref.placement.bottom = 698
+Apr 01 12:38:48: vmx| DICT            pref.tip.index = 2
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.power.items.count = 7
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.power.item0.id = POWER_OFF
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.power.item1.id = SUSPEND
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.power.item2.id = POWER_ON
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.power.item3.id = RESET
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.power.item4.id = _SEP_
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.power.item5.id = PREVIEW_PLAYER
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.power.item6.id = PREVIEW_WS
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.proj.items.count = 4
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.proj.item0.id = ADD_VM
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.proj.item1.id = POLICIES
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.proj.item2.id = PKG_NEW
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.proj.item3.id = EDIT_SETTINGS
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.view.items.count = 6
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.view.item0.id = FAVORITES
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.view.item1.id = FULL_SCREEN
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.view.item2.id = QUICK_SWITCH
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.view.item3.id = _SEP_
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.view.item4.id = SUMMARY
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.view.item5.id = CONSOLE
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.snapshot.items.count = 3
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.snapshot.item0.id = SNAPSHOT
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.snapshot.item1.id = REVERT
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.snapshot.item2.id = SNAPSHOT_MANAGER
+Apr 01 12:38:48: vmx| DICT                  pref.kvm = FALSE
+Apr 01 12:38:48: vmx| DICT          pref.view.navBar = FALSE
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.menu.position.ix = 0
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.menu.position.newLine = TRUE
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.power.position.ix = 1
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.power.position.newLine = TRUE
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.power.position.length = 118
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.snapshot.position.ix = 2
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.snapshot.position.length = 87
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.view.position.ix = 3
+Apr 01 12:38:48: vmx| DICT pref.view.toolbars.view.position.length = 153
+Apr 01 12:38:48: vmx| DICT        pref.view.homepage = FALSE
+Apr 01 12:38:48: vmx| DICT              pref.autoFit = FALSE
+Apr 01 12:38:48: vmx| DICT pref.ws.openedObj2.present = FALSE
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj2.name = Hos-0.01
+Apr 01 12:38:48: vmx| DICT pref.ws.openedObj3.present = FALSE
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj3.type = vm
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj3.path = /vm/#a1416d1a02c53da1/
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj3.file = D:\我的操作系统\ms-dos\MS-DOS.vmx
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj3.name = MS-DOS
+Apr 01 12:38:48: vmx| DICT pref.ws.openedObj4.present = TRUE
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj4.type = home
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj4.path = 
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj4.file = 
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj4.name = Home
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj2.type = vm
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj2.path = /vm/#956f583f91cb381b/
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj2.file = D:\我的操作系统\hos-0.01的实现\Hos虚拟\Other Linux.vmx
+Apr 01 12:38:48: vmx| DICT pref.ws.openedObj5.present = TRUE
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj5.type = vm
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj5.path = /vm/#4b38610f3dab0c70/
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj5.file = D:\我的操作系统\RedHat Linux 黄河\Red Hat Linux.vmx
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj5.name = Red Hat Linux
+Apr 01 12:38:48: vmx| DICT       webUpdate.checkLast = 1174714325
+Apr 01 12:38:48: vmx| DICT webUpdate.lastCheck.status = done_updates
+Apr 01 12:38:48: vmx| DICT             pref.noChrome = FALSE
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj6.type = vm
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj6.path = /vm/#956f583f91cb381b/
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj6.file = D:\我的操作系统\hos-0.01的实现\Hos虚拟\Other Linux.vmx
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj6.name = Hos-0.01
+Apr 01 12:38:48: vmx| DICT pref.ws.openedObj6.present = TRUE
+Apr 01 12:38:48: vmx| DICT pref.ws.openedObj7.present = TRUE
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj7.type = vm
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj7.path = /vm/#a1416d1a02c53da1/
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj7.file = D:\我的操作系统\ms-dos\MS-DOS.vmx
+Apr 01 12:38:48: vmx| DICT   pref.ws.openedObj7.name = MS-DOS
+Apr 01 12:38:48: vmx| DICT --- USER DEFAULTS
+Apr 01 12:38:48: vmx| DICT --- HOST DEFAULTS
+Apr 01 12:38:48: vmx| DICT --- SITE DEFAULTS
+Apr 01 12:38:48: vmx| DICT --- COMMAND LINE
+Apr 01 12:38:48: vmx| DICT             gui.available = TRUE
+Apr 01 12:38:48: vmx| DICT --- CONFIGURATION
+Apr 01 12:38:48: vmx| DICT            config.version = 8
+Apr 01 12:38:48: vmx| DICT         virtualHW.version = 4
+Apr 01 12:38:48: vmx| DICT             scsi0.present = TRUE
+Apr 01 12:38:48: vmx| DICT                   memsize = 96
+Apr 01 12:38:48: vmx| DICT     MemAllowAutoScaleDown = FALSE
+Apr 01 12:38:48: vmx| DICT           scsi0:0.present = TRUE
+Apr 01 12:38:48: vmx| DICT          scsi0:0.fileName = Other Linux.vmdk
+Apr 01 12:38:48: vmx| DICT            ide1:0.present = TRUE
+Apr 01 12:38:48: vmx| DICT           ide1:0.fileName = auto detect
+Apr 01 12:38:48: vmx| DICT         ide1:0.deviceType = cdrom-raw
+Apr 01 12:38:48: vmx| DICT          floppy0.fileName = D:\我的操作系统\hos-0.01的实现\HuangheOS.img
+Apr 01 12:38:48: vmx| DICT         ethernet0.present = TRUE
+Apr 01 12:38:48: vmx| DICT               usb.present = TRUE
+Apr 01 12:38:48: vmx| DICT             sound.present = TRUE
+Apr 01 12:38:48: vmx| DICT          sound.virtualDev = es1371
+Apr 01 12:38:48: vmx| DICT            sound.fileName = -1
+Apr 01 12:38:48: vmx| DICT          sound.autodetect = TRUE
+Apr 01 12:38:48: vmx| DICT               displayName = Hos-0.01
+Apr 01 12:38:48: vmx| DICT                   guestOS = otherlinux
+Apr 01 12:38:48: vmx| DICT                     nvram = Other Linux.nvram
+Apr 01 12:38:48: vmx| DICT         ide1:0.autodetect = TRUE
+Apr 01 12:38:48: vmx| DICT          floppy0.fileType = file
+Apr 01 12:38:48: vmx| DICT              scsi0:0.redo = 
+Apr 01 12:38:48: vmx| DICT     ethernet0.addressType = generated
+Apr 01 12:38:48: vmx| DICT             uuid.location = 56 4d 7b b4 84 08 18 81-0e d9 4b d2 63 7b 0d 9f
+Apr 01 12:38:48: vmx| DICT                 uuid.bios = 56 4d 7b b4 84 08 18 81-0e d9 4b d2 63 7b 0d 9f
+Apr 01 12:38:48: vmx| DICT ethernet0.generatedAddress = 00:0c:29:7b:0d:9f
+Apr 01 12:38:48: vmx| DICT ethernet0.generatedAddressOffset = 0
+Apr 01 12:38:48: vmx| DICT  ethernet0.startConnected = FALSE
+Apr 01 12:38:48: vmx| DICT        floppy0.autodetect = TRUE
+Apr 01 12:38:48: vmx| DICT        checkpoint.vmState = 
+Apr 01 12:38:48: vmx| DICT --- USER DEFAULTS
+Apr 01 12:38:48: vmx| DICT --- HOST DEFAULTS
+Apr 01 12:38:48: vmx| DICT --- SITE DEFAULTS
+Apr 01 12:38:48: vmx| DICT --- GLOBAL SETTINGS
+Apr 01 12:38:48: vmx| WSSCAN: reserved mem (in MB) min=16 max=128 recommended=128
+Apr 01 12:38:48: vmx|         hostMem=224 maxAllowedAll=4096 maxAllowedVM=3600
+Apr 01 12:38:48: vmx|         totOverhead=0
+Apr 01 12:38:48: vmx| WSSCAN: used rec mem (in MB) 128
+Apr 01 12:38:48: vmx| WSSCAN: Overhead 30961 paged 5214 nonpaged 4096 maxFBSize
+Apr 01 12:38:48: vmx| WSSCAN 1 2 31243 31243 32768 -1 50 0
+Apr 01 12:38:48: vmx| LICENSE using: 'HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware Workstation\License.ws.5.0' 
+Apr 01 12:38:48: vmx| STATDECLGROUP stats Root "" null
+Apr 01 12:38:48: vmx| Host CPUID features: version 0x681 id1.edx 0x383fbff id1.ecx 0x0 id81.edx 0xc1cbfbff id81.ecx 0x0
+Apr 01 12:38:48: vmx| CPU.cpuFeatures = 0x483d5e00
+Apr 01 12:38:48: vmx| CPUID after masking: version 0x681 id1.edx 0x383fbff id1.ecx 0x0 id81.edx 0xc1cbfbff id81.ecx 0x0 id88.ecx 0x0
+Apr 01 12:38:48: vmx| CPU.cpuFeatures = 0x483d5e00
+Apr 01 12:38:48: vmx| KHZEstimate 1829892
+Apr 01 12:38:48: vmx| MHZEstimate 1830
+Apr 01 12:38:48: vmx| NumVCPUs 1
+Apr 01 12:38:48: vmx| UUID: location-UUID is 56 4d af 64 4a 11 f9 ac-e6 04 4d 10 65 a9 ff dd
+Apr 01 12:38:48: vmx| UUID: canonical path is d:\我的操作系统\hos-0.01的实现\hos虚拟\other linux.vmx
+Apr 01 12:38:48: vmx| UUID: location-UUID is 56 4d 7b b4 84 08 18 81-0e d9 4b d2 63 7b 0d 9f
+Apr 01 12:38:48: vmx| MM: Using partialmap, 24576 pages AC 0 CE 1 TM 0 DOHU 0
+Apr 01 12:38:48: vmx| UUID: canonical path is d:\我的操作系统\hos-0.01的实现\hos虚拟\other linux.vmx
+Apr 01 12:38:48: vmx| UUID: location-UUID is 56 4d 7b b4 84 08 18 81-0e d9 4b d2 63 7b 0d 9f
+Apr 01 12:38:48: vmx| MM: using fileName D:\我的操作系统\hos-0.01的实现\Hos虚拟\564d7bb4-8408-1881-0ed9-4bd2637b0d9f.vmem for paging
+Apr 01 12:38:48: vmx| Msg_Reset:
+Apr 01 12:38:48: vmx| ----------------------------------------
+Apr 01 12:38:48: vmx| Opened paging file D:\我的操作系统\hos-0.01的实现\Hos虚拟\564d7bb4-8408-1881-0ed9-4bd2637b0d9f.vmem
+Apr 01 12:38:48: vmx| Mapped mainmem as pageable
+Apr 01 12:38:48: vmx| MStat: Creating Stat vm.uptime
+Apr 01 12:38:48: vmx| DISK: OPEN scsi0:0 'D:\我的操作系统\hos-0.01的实现\Hos虚拟\Other Linux.vmdk' persistent R[(null)]
+Apr 01 12:38:48: vmx| DISKLIB-DSCPTR: Opened [0]: "Other Linux-s001.vmdk" (0xa)
+Apr 01 12:38:48: vmx| DISKLIB-DSCPTR: Opened [1]: "Other Linux-s002.vmdk" (0xa)
+Apr 01 12:38:48: vmx| DISKLIB-DSCPTR: Opened [2]: "Other Linux-s003.vmdk" (0xa)
+Apr 01 12:38:48: vmx| DISKLIB-DSCPTR: Opened [3]: "Other Linux-s004.vmdk" (0xa)
+Apr 01 12:38:48: vmx| DISKLIB-DSCPTR: Opened [4]: "Other Linux-s005.vmdk" (0xa)
+Apr 01 12:38:48: vmx| DISKLIB-LINK  : Opened 'D:\我的操作系统\hos-0.01的实现\Hos虚拟\Other Linux.vmdk' (0xa): twoGbMaxExtentSparse, 16777216 sectors / 8192 Mb.
+Apr 01 12:38:48: vmx| DISKLIB-LIB   : Opened "D:\我的操作系统\hos-0.01的实现\Hos虚拟\Other Linux.vmdk" (flags 0xa).
+Apr 01 12:38:48: vmx| DISK: OPEN 'D:\我的操作系统\hos-0.01的实现\Hos虚拟\Other Linux.vmdk' Geo (1044/255/63) BIOS Geo (0/0/0) freeSpace=12771Mb
+Apr 01 12:38:48: vmx| TimeTracker host to guest rate conversion 1563401493600 @ 1829892000Hz -> 1563401493600 @ 1829892000Hz
+Apr 01 12:38:48: vmx| TimeTracker host to guest rate conversion ((x * 2147483648) >> 31) + 0
+Apr 01 12:38:48: vmx| SCSI0: UNTAGGED commands will be converted to ORDER tags.
+Apr 01 12:38:48: vmx| DISKUTIL: scsi0:0 : capacity=16777216
+Apr 01 12:38:48: vmx| DISKUTIL: scsi0:0 : geometry=1044/255/63
+Apr 01 12:38:48: vmx| MStat: Creating Stat vm.heartbeat
+Apr 01 12:38:48: vmx| DISKUTIL: scsi0:0 : toolsVersion = 0
+Apr 01 12:38:48: vmx| DISKUTIL: Offline toolsVersion = 0
+Apr 01 12:38:48: vmx| TOOLS INSTALL initializing state to IDLE on power on.
+Apr 01 12:38:48: vmx| USB: Initializing UHCI host controller
+Apr 01 12:38:48: vmx| USB: Initializing USB Generic backend
+Apr 01 12:38:48: vmx| USBGW: Connected to HCMON version 1.1
+Apr 01 12:38:48: vmx| VLANCE: send cluster threshold is 80, size = 2 recalcInterval is 2 ticks
+Apr 01 12:38:48: vmx| Ethernet0 MAC Address: 00:0c:29:7b:0d:9f
+Apr 01 12:38:48: vmx| VMXNET: send cluster threshold is 80, size = 2 recalcInterval is 2 ticks, dontClusterSize is 128
+Apr 01 12:38:48: vmx| E1000: checksum cycles/kB: C=1079 asm=412
+Apr 01 12:38:48: vmx| VirtualProtect MapProtectMem(0x1590000,0x1000) returns 0x1e7
+Apr 01 12:38:48: vmx| Can't read-only monitor pages from 0x01590000 to 0x01591000
+Apr 01 12:38:48: vmx| VirtualProtect MapProtectMem(0x1592000,0x0) returns 0x57
+Apr 01 12:38:48: vmx| Can't read-only monitor pages from 0x01592000 to 0x01592000
+Apr 01 12:38:48: vmx| TOOLS received request in VMX to set option 'enableDnD' -> '1'
+Apr 01 12:38:48: vmx| VMX_PowerOn: ModuleTable_PowerOn = 1
+Apr 01 12:38:48: mks| Async MKS thread is alive
+Apr 01 12:38:48: vmx| DnD rpc already set to 1
+Apr 01 12:38:48: mks| Connecting to window system.
+Apr 01 12:38:48: mks| KHBKL: Unable to parse keystring at: ''
+Apr 01 12:38:48: vcpu-0| APIC: version = 0x10, max LVT = 4
+Apr 01 12:38:48: vcpu-0| APIC: LDR = 0x1000000, DFR = 0xffffffff
+Apr 01 12:38:48: vcpu-0| PShare: enabled 1, scanRate 32, checkRate 16
+Apr 01 12:38:48: vcpu-0| guestCpuFeatures = 0x483d5e00
+Apr 01 12:38:48: vcpu-0| Init modules.
+Apr 01 12:38:48: vcpu-0| CPU reset: hard
+Apr 01 12:38:48: vmx| FLOPPYLIB-IMAGE: Invalid boot sector: signature aa55, sector size 12790, sectors 6378
+Apr 01 12:38:48: vmx| FLOPPYLIB-IMAGE: Expected: signature aa55, sector size 512, sectors 2880
+Apr 01 12:38:48: vmx| FLOPPYLIB-IMAGE: Floppy geometry 80/2/18 detected from image size.
+Apr 01 12:38:48: vmx| CDROM: Using autodetect backend H: for ide1:0.
+Apr 01 12:38:48: vcpu-0| sz=3112928
+Apr 01 12:38:48: mks| Ignoring update request in VGA_Expose (mode change pending).
+Apr 01 12:38:48: mks| Ignoring update request in VGA_Expose (mode change pending).
+Apr 01 12:38:48: vcpu-0| vmm32 initialized: Releasebuild-19175. cflags: 0x08000002.01c41000.00000150
+Apr 01 12:38:49: vcpu-0| SVGA: Registering MemSpace at 0xf0000000(0x0) and 0xec000000(0x0)
+Apr 01 12:38:49: vcpu-0| PCI OPROM: Asked to map the VBIOS OPROM at 0xfe800000 (size 32768 bytes)
+Apr 01 12:38:49: vcpu-0| PCI OPROM: Asked to unmap the VBIOS OPROM
+Apr 01 12:38:49: vcpu-0| SVGA: Unregistering MemSpace at 0xf0000000(0xf0000000) and 0xec000000(0xec000000)
+Apr 01 12:38:49: vcpu-0| PCI OPROM: Asked to map the SBIOS OPROM at 0xfe800000 (size 16384 bytes)
+Apr 01 12:38:49: vcpu-0| PCI OPROM: Asked to unmap the SBIOS OPROM
+Apr 01 12:38:49: vcpu-0| PCI OPROM: Asked to map the VLANCE OPROM at 0xfe800000 (size 65536 bytes)
+Apr 01 12:38:49: vcpu-0| PCI OPROM: Asked to unmap the VLANCE OPROM
+Apr 01 12:38:49: vcpu-0| SVGA: Registering MemSpace at 0xf0000000(0xf0000000) and 0xec000000(0xec000000)
+Apr 01 12:38:49: vcpu-0| PCI OPROM: Asked to map the VBIOS OPROM at 0xfe800000 (size 32768 bytes)
+Apr 01 12:38:49: vcpu-0| PCI OPROM: Asked to unmap the VBIOS OPROM
+Apr 01 12:38:49: vcpu-0| SVGA: Unregistering MemSpace at 0xf0000000(0xf0000000) and 0xec000000(0xec000000)
+Apr 01 12:38:49: vcpu-0| SVGA: Registering IOSpace at 0x1460 (0x0)
+Apr 01 12:38:49: vcpu-0| SVGA: Registering MemSpace at 0xf0000000(0xf0000000) and 0xec000000(0xec000000)
+Apr 01 12:38:49: mks| Ignoring update request in VGA_Expose (mode change pending).
+Apr 01 12:38:49: mks| Ignoring update request in VGA_Expose (mode change pending).
+Apr 01 12:38:49: vcpu-0| UHCI: Global Reset
+Apr 01 12:38:49: vcpu-0| UHCI: HCReset
+Apr 01 12:38:49: vcpu-0| UHCI: HCReset
+Apr 01 12:38:50: vcpu-0| AIOGNRC: Starting 2 I/O threads.
+Apr 01 12:38:50: vcpu-0| Winnt_CDROM: 'H:' Length 24 MaxTransferLength 131072 MaxPhysPages 17
+Apr 01 12:38:50: vcpu-0| Winnt_CDROM: AlignMask 0x0 !AsyncEvent !TaggedQ ScanUp PIO
+Apr 01 12:38:51: vcpu-0| PCI OPROM: Asked to map the SBIOS OPROM at 0xfe800000 (size 16384 bytes)
+Apr 01 12:38:51: vcpu-0| PCI OPROM: Asked to unmap the SBIOS OPROM
+Apr 01 12:38:51: vcpu-0| DISKUTIL: scsi0:0 : geometry=1044/255/63
+Apr 01 12:38:51: vcpu-0| PCI OPROM: Asked to map the VLANCE OPROM at 0xfe800000 (size 65536 bytes)
+Apr 01 12:38:51: vcpu-0| PCI OPROM: Asked to map the VLANCE OPROM at 0xfe800000 (size 65536 bytes)
+Apr 01 12:38:51: vcpu-0| PCI OPROM: Asked to unmap the VLANCE OPROM
+Apr 01 12:38:52: vcpu-0| BIOS-UUID is 56 4d 7b b4 84 08 18 81-0e d9 4b d2 63 7b 0d 9f
+Apr 01 12:38:52: vcpu-0| DISKUTIL: scsi0:0 : toolsVersion = 0
+Apr 01 12:38:52: vcpu-0| DISKUTIL: Offline toolsVersion = 0
+Apr 01 12:38:52: mks| Ignoring update request in VGA_Expose (mode change pending).
+Apr 01 12:39:00: vmx| VMXVmdbCbVmVmxExecState: Exec state change requested to state poweredOff without reset
+Apr 01 12:39:00: vmx| Stopping VCPU threads...
+Apr 01 12:39:00: mks| Detaching from window system.
+Apr 01 12:39:00: mks| Async MKS thread is exiting
+Apr 01 12:39:00: vmx| TOOLS received request in VMX to set option 'enableDnD' -> '0'
+Apr 01 12:39:00: vmx| TOOLS received request in VMX to set option 'enableDnD' -> '0'
+Apr 01 12:39:00: vmx| MKS local poweroff
+Apr 01 12:39:00: vmx| Lock before MKS lock created.  Early poweroff?
+Apr 01 12:39:00: vmx| Unlock before MKS lock created.  Early poweroff?
+Apr 01 12:39:00: vmx| scsi0:0: numIOs = 0 numMergedIOs = 0 numSplitIOs = 0 ( 0.0%)
+Apr 01 12:39:00: vmx| AIOWIN32: asyncOps=26 syncOps=49 bufSize=4Kb delayed=0 fixed=31 sgOp=16 sgOn=1
+Apr 01 12:39:02: IO#0| AIOGNRC: thread #0 exiting (1)
+Apr 01 12:39:02: IO#1| AIOGNRC: thread #1 exiting (1)
+Apr 01 12:39:02: vmx| AIOGNRC: asyncOps=0 syncOps=0 maxPending=0 maxCompleted=0
+Apr 01 12:39:02: vmx| vmdbPipe_Streams: Couldn't read
+Apr 01 12:39:02: vmx| VMX idle exit
+Apr 01 12:39:02: vmx| Flushing VMX VMDB connections
+Apr 01 12:39:02: vmx| IPC_exit: disconnecting all threads
+Apr 01 12:39:02: vmx| VMX exit.
+Apr 01 12:39:02: vmx| AIOMGR-S : stat o=7 r=9 w=0 i=0 br=4582 bw=0

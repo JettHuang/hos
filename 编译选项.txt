@@ -1,0 +1,1 @@
+/nologo /MLd /W4 /GX /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/handler.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /Gs /TC /c 

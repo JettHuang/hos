@@ -1,0 +1,246 @@
+;说明： setup利用ROM BIOS中断读取机器系统数据，并将这些系统数据保存到
+;0X9000：0000 开始的位置(覆盖掉了boot程序所在的地方), 在这些工作完成之后
+;我们就不需要使用ROM中的中断了，所以将system 移动到 0000:0000 处
+;	huangheshui  2007年3月20日 ,17:59:32
+;
+;--------------------------------------------------------------------
+%include "pm.inc"
+
+org	0h
+
+INITSEG    EQU	 9000h  ;boot ---> 9000:0000 处
+SETUPSEG   EQU	 9020h  ;setup.bin 被加载到 9020:0000
+SYSTEMSEG  EQU	 1000h  ;system 模块被加载到 1000:0000
+
+[SECTION .setup]
+[BITS 16]
+start:
+
+;------------------------核心代码----------------------------
+;下面通过BIOS 的中断，保存一些当前系统的信息
+	mov  ax ,INITSEG
+	mov  ds ,ax
+;保存当前的光标位置
+;INT 10h / AH = 03h - get cursor position and size.
+;input:
+;	BH = page number.
+;return:
+;	DH = row.
+;	DL = column.
+;	CH = cursor start line.
+;	CL = cursor bottom line.
+	mov  ah ,03h
+	mov  bl ,0h
+	int  10h
+	mov  [0], dx ; dl = column ,dh = row
+	
+;获取扩展内存的大小, >1MB 的部分
+;int 15h ,ah = 88h .返回: ax = 从0x100000(1M)处开始的扩展内存大小(KB)
+;	mov  ah ,088h
+;	int  15h
+;	mov  [2] ,ax  ;内存扩展,单位==KB
+	mov  ax ,0e801h
+	int  15h
+;	jc   Error
+	mov  [100h] ,cx	;cx = 1M--16M
+	mov  [102h] ,dx ;dx = 16M-- 4G
+;获取显卡的当前模式,
+;int 10h , ah = 0fh ,
+;返回: ah = 字符列数 ,al = 显示模式 ;bh = 当前显示页.
+	mov ah ,0fh
+	int 10h
+	mov [4] ,bh
+	mov [6] ,ax 
+
+;检查显示方式(EGA/VGA)并取参数
+;int 10h ,ah =12h ,bl = 10h 
+;返回: bh = 显示状态 , bl = 安装的显示内存 ,cx = 显卡特性参数.
+	mov ah ,12h
+	mov bl ,10h
+	int 10h
+	mov [8] ,ax
+	mov [10] ,bx
+	mov [12] ,cx
+
+;Get  hd0 data
+;第一个硬盘参数表的首地址是中断向量0X41的向量值 ,
+;第2个硬盘参数表的首地址是中断向量0X46的向量值 ; 表的长度== 16 bytes
+; 0ffset低地址,segment高地址
+	mov  ax ,0000h	    ;中断向量表段
+	mov  ds ,ax
+	lds  si ,[4 * 41h]  ; load ds:4*41h 处内容到t寄存器 ds:si
+	mov  ax ,INITSEG
+	mov  es ,ax
+	mov  di ,0080h
+	mov  cx ,10h	    ;16 bytes
+	rep  movsb
+
+;Get hd1 data
+	mov  ax ,0000h
+	mov  ds ,ax
+	lds  si ,[4 * 46h] ; load to ds:si
+	mov  ax ,INITSEG
+	mov  es ,ax
+	mov  di ,0090h
+	mov  cx ,10h	    ;16 bytes
+	rep  movsb
+
+;判断是否存在第2个硬盘,如果不存在则对 第2个表清零!
+;  int 13h ,ah = 0x15 ;取盘类型功能
+;input:
+;	dl = 驱动器号(0x80X是硬盘,0x80 指第1个硬盘,0x81 第2个硬盘).
+;output:
+;	ah = 类型码 ;00h- 没有这个硬盘,CF置位; 01- 软驱,没有change-line 支持;
+;	02 - 软驱(或其他可移动设备),有change-line支持 ;03 -是硬盘
+
+	mov ah ,15h
+	mov dl ,81h
+	int 13h
+	jc  no_hd1
+	cmp ah ,03h
+	je  has_hd1
+no_hd1:   ;没有第2个硬盘 ,清空第2个硬盘记录
+	mov  ax ,INITSEG
+	mov  es ,ax
+	mov  di ,0090h
+	xor  al ,al
+	mov  cx ,10h	    ;16 bytes
+	rep  stosb
+	
+has_hd1:
+;显示 "In the setup"
+	mov  ax ,SETUPSEG
+	mov  es ,ax
+	mov  ax , szPromt
+	mov  bp , ax			; ES:BP = 串地址
+	mov  cx , szPromtLen		; CX = 串长度
+	mov  ax , 01301h		; AH = 13,  AL = 01h
+	mov  bx , 000ah			; 页号为0(BH = 0) 黑底绿字(BL = 0ah,高亮)
+	mov  dx , 0100h			; row = 3 ,column = 0
+	int  10h			; 10h 号中断
+;将system 从 0x10000 移动到 0x00000处
+	mov ax ,0000h
+	cld
+do_move:
+	mov es ,ax	;目标段		ds:si ---> es:di
+	add ax ,1000h   
+	cmp ax ,9000h	;共512KB,0x10000 ~ 0x7ffff ---> 0x00000 ~ 0x6ffff
+	je  end_move
+	mov ds ,ax	;来源段
+	xor si ,si
+	xor di ,di
+	mov cx ,8000h	;8000h 个字 == 64KB
+	rep movsw	;Debug ... ,非常令人奇怪的是bochs 2.3在这儿会卡住 ,因为它是完全模拟硬件的
+	jmp do_move	;这虚拟机器中，这儿可能发生卡住现象
+
+end_move:
+
+;从现在开始,我们再也不用BIOS提供的功能, 我们将走进32位的保护模式
+;这就意味着以后的代码将是 32 位的代码.
+	
+	;加载gdtr
+	mov  ax ,SETUPSEG
+	mov  ds ,ax
+	lgdt [GdtPtr]
+
+	;至此希望应该正常工作...
+	;关中断
+	cli
+	;初始化保护模式下的8259A ,希望栈应该没有错误
+funInit8259A:
+;工作在全嵌套模式下
+;开始设置ICW (Initialization Command Word )
+	mov  al, 11h
+	out  20h,al		;主片8259，ICW1
+	call io_delay
+
+	out 0A0h, al		;从片8259, ICW1
+	call io_delay
+
+	mov al, 020h		;IRQ0 对应中断向量0X20
+	out 21h, al		;主片8259，ICW2
+	call io_delay
+
+	mov al,028h		;IRQ8 对应中断向量0X28
+	out 0A1h, al		;从片8259，ICW2
+	call io_delay
+
+	mov al,04h		;IR2级联从片
+	out 21h, al		;主片8259 ICW3
+	call io_delay		
+
+	mov al,02h		;从片连接主片的IR2
+	out 0A1h, al		;从片8259 ICW3
+	call io_delay
+
+	mov al, 001h
+	out 21h ,al		;主片8259 ICW4
+	call io_delay
+
+	out 0A1h,al		;从片8259 ICW4
+	call io_delay
+;开始设置OCW1( operation Control Word )
+	mov al,11111100b       
+	out 21h ,al		;屏蔽主片8259所有中断 ,除了时钟,键盘
+	call io_delay 
+
+	mov al,11111111b
+	out 0A1h ,al		;屏蔽从片8259所有中断
+	call io_delay
+;设置8253计数器/定时，把时钟中断置为10ms一次
+	mov al ,00110100b	; counter0 ,mode2 , lmb/hmb
+	out 43h ,al
+	mov al ,09bh
+	out 40h, al
+	mov al ,02eh
+	out 40h, al
+;------------------------------------------------------------------
+	;打开地址线A20
+	in  al, 92h
+	or  al, 00000010b
+	out 92h, al
+	
+	;准备切换到保护模式
+	mov  eax, cr0
+	or   eax, 1
+	mov  cr0, eax   ;设置保护模式启动
+
+	;清空预取指令队列，长跳转进入保护模式^_^
+	jmp dword SelectCode32:(SETUPSEG * 16 + start32 + 0c0000000h) ;将SelectCode32 装入cs ,并跳转到SelectCode32:0 处
+;延迟函数
+io_delay:
+	nop
+	nop
+	nop
+	nop
+	ret
+
+;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[SECTION .code32]
+[BITS  32]
+start32:
+	mov ax ,SelectData32
+	mov ds ,ax
+	jmp  SelectCode32:( 1000h + 0c0000000h )	;跳转到system.exe 中的head
+
+
+align  3
+;全局描述符表			  段基址,       段界限     , 属性
+Gdt_desc_Null:	  Descriptor       0 ,            0 ,         0
+Gdt_desc_Code32:  Descriptor       40000000h ,    0fffffh ,      DA_C  + DA_32 + DA_LIMIT_4K
+Gdt_desc_Data32:  Descriptor       40000000h ,    0fffffh ,      DA_DRW + DA_LIMIT_4K   
+Gdt_desc_Stack32: Descriptor       40000000h ,    0fffffh ,      DA_DRW + DA_LIMIT_4K + DA_32 ;对于ss来说 DA_32 这很重要
+;获取段选择子，即索引
+SelectCode32	equ  Gdt_desc_Code32 - Gdt_desc_Null  ;8
+SelectData32	equ  Gdt_desc_Data32  - Gdt_desc_Null  ;16
+
+;描述符表结束
+align 2
+GdtLen    equ  $ - Gdt_desc_Null   ;GDT的长度
+GdtPtr:    dw   GdtLen - 1          ;GDT段界
+	  dd   SETUPSEG * 16 + Gdt_desc_Null 	;GDT基地址
+
+szPromt:    db   0dh ,0ah ,'in the setup !' ,0dh ,0ah 
+szPromtLen   equ   $ - szPromt
+
+
